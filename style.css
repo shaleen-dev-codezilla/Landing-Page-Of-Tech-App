@@ -1,0 +1,152 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a1818;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+nav {
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* ✅ allows wrapping on small screens */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #00ee978f;
+}
+
+/* SEARCH FIX */
+input {
+    width: 100%;
+    /* ✅ responsive */
+    max-width: 200px;
+    /* keeps it neat */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+/* MAIN */
+main {
+    margin-top: 120px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+/* BUTTON (same style, slightly responsive) */
+.btn {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #11cb93, #25aafc);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 15px rgba(37, 117, 252, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(106, 17, 203, 0.35);
+    background: linear-gradient(135deg, #050506, #7a6294);
+}
+
+/* SECTIONS (YOUR COLORS KEPT 🔥) */
+#hero {
+    background-image: linear-gradient(172deg, rgb(79, 1, 92), rgb(18, 112, 227));
+    color: #fff;
+}
+
+#about {
+    background-image: linear-gradient(138deg, rgba(15, 130, 152, 0.76), rgb(29, 51, 100));
+    color: white;
+}
+
+#services {
+    color: #fff;
+    background-image: linear-gradient(89deg, rgba(161, 116, 50, 0.879), rgb(212, 151, 109));
+}
+
+#contact {
+    background-image: linear-gradient(89deg, rgba(147, 178, 174, 0.879), rgb(150, 129, 115));
+    color: #fff;
+}
+
+/* CARDS */
+.card {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 🔥 MOBILE FIX */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        /* stack navbar */
+        gap: 10px;
+    }
+
+    input {
+        max-width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        /* full width buttons */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
